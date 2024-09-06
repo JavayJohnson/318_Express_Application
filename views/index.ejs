@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javay's Self-help Book Collection</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css"> 
 </head>
 <body>
 
@@ -17,23 +17,43 @@
 </header>
 
 <main class="main-content">
-    <% books.forEach(book => { %>
-    <div class="book-item">
-        <img src="/images/default-book-cover.jpg" alt="<%= book.title %> Book Cover">
-        <h3><%= book.title %></h3>
-        <p>❤️ Likes: <%= book.likes %></p>
-        <p><strong>Comments:</strong> <%= book.comments.join(', ') %></p>
-        <button type="button" onclick="likeBook('<%= book.id %>')">👍 Like</button>
-        <form action="/books/<%= book.id %>/comments" method="POST">
-            <textarea name="comment" placeholder="Leave a comment" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+    <div class="books-grid">
+        
+        <div class="book-item">
+            <img src="/images/Book1.jpg" alt="Book 1">
+            <h3>Success Book</h3>
+            <p>❤️ Likes: <%= books[0].likes %></p>
+            <form action="/books/1/comments" method="POST">
+                <textarea name="comment" placeholder="Leave a comment" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        
+        <div class="book-item">
+            <img src="/images/Book2.jpg" alt="Book 2">
+            <h3>Soul of a Winner</h3>
+            <p>❤️ Likes: <%= books[1].likes %></p>
+            <form action="/books/2/comments" method="POST">
+                <textarea name="comment" placeholder="Leave a comment" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="book-item">
+            <img src="/images/Book3.jpg" alt="Book 3">
+            <h3>Empowerment</h3>
+            <p>❤️ Likes: <%= books[2].likes %></p>
+            <form action="/books/3/comments" method="POST">
+                <textarea name="comment" placeholder="Leave a comment" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
-    <% }) %>
 </main>
 
 <footer>
-    <p>&copy; 2024 Javay J. Johnson's Self-help Book Store</p>
+    <p>&copy; Copyright ©️ 2024 Javay Johnson, LLC All Rights Reserved Javay J. Johnson's Self-help Book Store</p>
 </footer>
 
 <script>

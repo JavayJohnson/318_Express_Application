@@ -1,8 +1,8 @@
 // Simulated book data
 let booksData = [
-    { id: 1, title: 'Success', likes: 0, comments: [] },
-    { id: 2, title: 'Soul', likes: 0, comments: [] },
-    { id: 3, title: 'Empowerment', likes: 0, comments: [] }
+    { id: 1, title: 'Success Is Spelled with Two Cs', likes: 0, comments: [] },
+    { id: 2, title: 'Soul of a Winner', likes: 0, comments: [] },
+    { id: 3, title: 'The Empowerment Codes', likes: 0, comments: [] }
 ];
 
 // Function to find a book by ID
